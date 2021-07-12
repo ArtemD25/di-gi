@@ -1,0 +1,84 @@
+:root {
+  --di-gi_blue: #2B4074;
+  --white: #ffffff;
+;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto 0 auto;
+  padding: 0 90px 0 0 ;
+}
+
+.header {
+  background-color: var(--di-gi_blue);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__humburger-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 40px;
+  height: 40px;
+  border: none;
+
+  border-radius: 3px;
+
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.header__humburger-menu span {
+  width: 12px;
+  height: 2px;
+
+  border-radius: 1px;
+  background-color: var(--di-gi_blue);
+}
+
+.header__humburger-menu span:not(:last-of-type) {
+  margin-bottom: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
