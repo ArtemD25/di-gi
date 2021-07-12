@@ -23,13 +23,27 @@ a {
   text-decoration: none;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body > * {
+  width: 100%;
+  max-width: 1440px;
+}
+
 .container {
   max-width: 1230px;
   margin: 0 auto 0 auto;
-  padding: 0 90px 0 0 ;
 }
 
+/* HEADER section ---------------------------------------------------- */
+
 .header {
+  width: 100%;
+  max-width: 1440px;
   background-color: var(--di-gi_blue);
 }
 
@@ -37,6 +51,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 17px 90px 17px 0;
 }
 
 .header__humburger-menu {
@@ -65,6 +81,93 @@ a {
 
 .header__humburger-menu span:not(:last-of-type) {
   margin-bottom: 2px;
+}
+
+/* INTRO section ---------------------------------------------------- */
+
+.intro {
+  max-width: 1440px;
+}
+
+.intro__pages {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.intro__page {
+  position: relative;
+
+  display: none;
+  width: 100%;
+  min-height: 668px;
+  margin: 0;
+  padding: 107px 0 0 0;
+
+  background-color: var(--di-gi_blue);
+  background-size: 1440px 668px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.intro__page--visible {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro__page1 {
+  background-image: url(/pictures/bg-img-10.jpg);
+}
+
+.intro__page2 {
+  background: url(/pictures/bg-img-10.jpg);
+}
+
+.intro__page3 {
+  background-image: url(/pictures/bg-img-10.jpg);
+}
+
+.intro__page::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(33, 33, 33, 0.3);
+}
+
+.intro__title,
+.intro__caption-text,
+.intro__page .branded-link {
+  z-index: 2;
+}
+
+.intro__title {
+  display: block;
+  max-width: 55%;
+  margin: 0 auto 22px;
+
+  text-align: center;
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 1em;
+  color: var(--white);
+}
+
+.intro__caption-text {
+  max-width: 70%;
+  margin: 0 auto 30px;
+
+  text-align: center;
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--white);
 }
 
 .visually-hidden {
