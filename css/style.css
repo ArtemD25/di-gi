@@ -51,6 +51,24 @@ body > * {
   cursor: pointer;
 }
 
+.pagination {
+  list-style-type: none;
+
+}
+
+.pagination__oval {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 100%;
+  vertical-align: top;
+}
+
+.pagination__oval:not(:last-of-type) {
+  margin-right: 10px;
+}
+
 /* HEADER section ---------------------------------------------------- */
 
 .header {
@@ -256,6 +274,30 @@ body > * {
 
 .intro__aside-button--forth {
   background-color: rgba(249, 246, 229, 1);
+}
+
+.intro .pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translate(-50%, 0);
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.intro .pagination__oval {
+  border: 1px solid var(--white);
+
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.intro .pagination__oval--active {
+  background-color: transparent;
+  border-color: var(--white);
 }
 
 
