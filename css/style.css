@@ -1,6 +1,7 @@
 :root {
   --di-gi_blue: #2B4074;
   --white: #ffffff;
+  --elephant_bone_color: rgba(249, 246, 229, 1);
 ;
 }
 
@@ -42,6 +43,7 @@ body > * {
 .branded-link {
   display: inline-block;
   width: auto;
+  border: none;
 
   background-color: var(--di-gi_blue);
   text-transform: uppercase;
@@ -51,9 +53,18 @@ body > * {
   cursor: pointer;
 }
 
+.branded-link--light {
+  background-color: var(--elephant_bone_color);
+  color: var(--di-gi_blue);
+}
+
+.branded-link--blue {
+  background-color: var(--di-gi_blue);
+  color: var(--elephant_bone_color);
+}
+
 .pagination {
   list-style-type: none;
-
 }
 
 .pagination__oval {
@@ -67,6 +78,38 @@ body > * {
 
 .pagination__oval:not(:last-of-type) {
   margin-right: 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section-title {
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.branded-line {
+  width: 99px;
+  height: 8px;
+  border: none;
+  margin: 0;
+
+  background-color: var(--di-gi_blue);
 }
 
 /* HEADER section ---------------------------------------------------- */
@@ -207,7 +250,6 @@ body > * {
 .intro__page .branded-link {
   padding: 16px 46px;
 
-  color: rgba(249, 246, 229, 1);
   font-weight: 400;
 }
 
@@ -227,15 +269,13 @@ body > * {
   position: relative;
 
   display: block;
-  width: var(--aside_button_dimension);
-  height: var(--aside_button_dimension);
+  width: 70px;
+  height: 70px;
   margin: 0;
   padding: 0;
   border: none;
 
   cursor: pointer;
-
-  --aside_button_dimension: 70px;
 }
 
 .intro__aside-button--back::after {
@@ -273,7 +313,7 @@ body > * {
 }
 
 .intro__aside-button--forth {
-  background-color: rgba(249, 246, 229, 1);
+  background-color: var(--elephant_bone_color);
 }
 
 .intro .pagination {
@@ -300,19 +340,226 @@ body > * {
   border-color: var(--white);
 }
 
+/* PROMO section ---------------------------------------------------*/
 
-.visually-hidden {
-  position: absolute;
+.promo {
+  margin: 0;
+  padding: 57px 150px;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
+  background-color: var(--di-gi_blue);
+  color: var(--white);
+}
+
+.promo .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo__text {
+  max-width: 50%;
+}
+
+.promo__motto {
+  display: block;
+  margin: 0 0 5px 0;
   padding: 0;
 
-  white-space: nowrap;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
 
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.promo__description {
+  font-family: 'Dosis', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.promo__link {
+  padding: 16px;
+
+  font-weight: 500;
+}
+
+/* SERVICE section ---------------------------------------------*/
+
+.service {
+  background-color: var(--white);
+}
+
+.service .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 5px 16px 0;
+  max-width: 1400px;
+}
+
+.service__text {
+  max-width: 30%;
+}
+
+.service .section-title {
+  margin-bottom: 65px;
+}
+
+.service__text-motto {
+  display: block;
+  margin-bottom: 30px;
+
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+}
+
+.service .branded-line {
+  margin-bottom: 35px;
+}
+
+.service__text-description {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  color: rgba(121, 121, 121, 1);
+}
+
+.service__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.service__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 212px;
+  min-height: 255px;
+  border: 5px solid transparent;
+  padding: 0 10px;
+
+  transition: ease-in-out 400ms;
+}
+
+.service__item:hover {
+  border: 5px solid var(--di-gi_blue);
+}
+
+.service__item::before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 25px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transition: ease-in-out 400ms;
+}
+
+.service__item--strategy::before {
+  background-image: url(../images/service_strategy.png);
+}
+
+.service__item--analysis::before {
+  background-image: url(../images/service_analysis.png);
+}
+
+.service__item--social-media::before {
+  background-image: url(../images/service_social.png);
+}
+
+.service__item--development::before {
+  background-image: url(../images/service_development.png);
+}
+
+.service__item--content::before {
+  background-image: url(../images/service_content.png);
+}
+
+.service__item--ux::before {
+  background-image: url(../images/service_ux.png);
+}
+
+.service__item--targeting::before {
+  background-image: url(../images/service_targeting.png);
+}
+
+.service__item--product::before {
+  background-image: url(../images/service_product.png);
+}
+
+.service__item:hover::before {
+  margin-bottom: 15px;
+}
+
+.service__title {
+  margin-bottom: 18px;
+
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(74, 74, 74, 1);
+}
+
+.service__description {
+  display: none;
+  margin-bottom: 18px;
+
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(155, 155, 155, 1);
+
+  transition: ease-in-out 400ms;
+}
+
+.service__item:hover .service__description {
+  display: block;
+}
+
+.service__link {
+  display: none;
+
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  color: rgba(43, 64, 116, 1);
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: ease-in-out 400ms;
+}
+
+.service__link::after {
+  content: " →";
+
+  position: relative;
+  top: -2px;
+}
+
+.service__item:hover .service__link {
+  display: block;
 }
