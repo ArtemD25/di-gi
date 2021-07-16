@@ -7,7 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Di-Gi digital agency</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <!-- <link rel="stylesheet" href="css/owl.theme.css"> -->
   <link rel="stylesheet" href="css/style.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
@@ -29,14 +32,14 @@
 
   <article class="intro">
     <h2 class="visually-hidden">Информация о деятельности Di-Gi digital agency</h2>
-    <ul class="intro__pages">
+    <ul class="intro__pages owl-carousel owl-theme" id="owl-demo">
       <li class="intro__page intro__page1">
         <strong class="intro__title">Мысли очень глобально</strong>
         <p class="intro__caption-text">Di Gі - это диджитал агентство полного цикла, направленное на самый лучший
           результат наших клиентов в маркетинге, продажах и управлении</p>
         <a href="#" class="intro__link branded-link branded-link--blue">Подробнее</a>
       </li>
-      <li class="intro__page intro__page2 intro__page--visible">
+      <li class="intro__page intro__page2">
         <strong class="intro__title">Мысли глобально</strong>
         <p class="intro__caption-text">Di Gі - это диджитал агентство полного цикла, направленное на самый лучший
           результат наших клиентов в маркетинге, продажах и управлении</p>
@@ -49,11 +52,11 @@
         <a class="intro__link branded-link branded-link--blue" href="#">Подробнее</a>
       </li>
     </ul>
-    <ul class="intro__aside-buttons">
+    <!-- <ul class="intro__aside-buttons">
       <li><button class="intro__aside-button intro__aside-button--back"></button></li>
       <li><button class="intro__aside-button intro__aside-button--forth"></button></li>
-    </ul>
-    <ul class="pagination">
+    </ul> -->
+    <!-- <ul class="pagination">
       <li class="pagination__oval">
         <a href="#"><span class="visually-hidden">Link to the first intro image</span></a>
       </li>
@@ -63,7 +66,7 @@
       <li class="pagination__oval">
         <a href="#"><span class="visually-hidden">Link to the third intro image</span></a>
       </li>
-    </ul>
+    </ul> -->
   </article>
 
   <section class="promo">
@@ -295,14 +298,14 @@
   <section class="quote">
     <div class="container">
       <h2 class="visually-hidden">Цитата лидера мнений о важности диджитал-маркетинга</h2>
-      <ul class="quote__quotes">
+      <ul class="quote__quotes owl-carousel owl-theme" id="owl-demo-2">
         <li class="quote__item">
           <blockquote>
             <p class="quote__text">Иногда хватает мгновения, чтобы забыть жизнь, а иногда <em class="quote__text--emphasized">не хватает жизни</em>, чтобы забыть мгновение.</p>
             <cite class="quote__author">Джим Моррисон</cite>
           </blockquote>
         </li>
-        <li class="quote__item quote__item--active">
+        <li class="quote__item">
           <blockquote>
             <p class="quote__text">Если нужно создавать либо повышать имидж компании, то <em class="quote__text--emphasized">диджитал-маркетинг</em> является наиболее подходящим</p>
             <cite class="quote__author">Маргарита Акулич</cite>
@@ -315,22 +318,12 @@
           </blockquote>
         </li>
       </ul>
-      <ul class="quote__pagination pagination">
-        <li class="pagination__oval">
-          <a href="#"><span class="visually-hidden">Link to the first intro image</span></a>
-        </li>
-        <li class="pagination__oval pagination__oval--active">
-          <a href="#"><span class="visually-hidden">Link to the second intro image</span></a>
-        </li>
-        <li class="pagination__oval">
-          <a href="#"><span class="visually-hidden">Link to the third intro image</span></a>
-        </li>
-      </ul>
     </div>
   </section>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
