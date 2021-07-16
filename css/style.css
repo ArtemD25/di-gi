@@ -224,8 +224,8 @@ body > * {
 
 .header__links-close {
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: 0;
+  right: 0;
   z-index: 4;
 
   display: none;
@@ -776,9 +776,12 @@ body > * {
   display: none;
   justify-content: space-between;
   align-items: center;
-
+  margin: 0;
+  padding: 0;
   width: 70px;
   height: 32px;
+
+  list-style-type: none;
 }
 
 .projects__item:hover .projects__figure-buttons {
