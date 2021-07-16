@@ -819,7 +819,7 @@ body > * {
   transition: ease-in-out 300ms;
 }
 
-.news__item:hover .news__figure::after {
+.news__figure::after {
   content: "";
 
   position: absolute;
@@ -828,6 +828,12 @@ body > * {
   bottom: 0;
   right: 0;
 
+  border-radius: 4px;
+
+  transition: ease-in-out 300ms;
+}
+
+.news__item:hover .news__figure::after {
   -webkit-box-shadow: inset 10px 10px var(--di-gi_blue),
                       inset -10px -10px var(--di-gi_blue),
                       inset 10px -10px var(--di-gi_blue),
@@ -836,7 +842,6 @@ body > * {
               inset -10px -10px var(--di-gi_blue),
               inset 10px -10px var(--di-gi_blue),
               inset -10px 10px var(--di-gi_blue);
-  border-radius: 4px;
 }
 
 .news__image {
