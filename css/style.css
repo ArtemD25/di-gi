@@ -884,6 +884,7 @@ body > * {
   top: calc(50% - 30px);
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 
   width: 28px;
   height: 28px;
