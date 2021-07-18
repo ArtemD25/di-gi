@@ -782,8 +782,9 @@ body > * {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 16px 5px 16px 0;
+  align-content: flex-start;
+  padding: 16px 44px 16px 60px;
+  width: 100%;
   max-width: 1350px;
 }
 
@@ -823,9 +824,8 @@ body > * {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-start;
-  margin: 0;
+  justify-content: center;
+  align-items: flex-start;
   padding: 0;
 
   list-style-type: none;
@@ -836,7 +836,7 @@ body > * {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 212px;
+  width: 200px;
   min-height: 255px;
   border: 5px solid transparent;
   padding: 0 10px;
@@ -954,7 +954,21 @@ body > * {
 }
 
 @media screen and (max-width: 1114px) {
-  
+  .service .container {
+    display: flex;
+    flex-direction: column;
+    padding: 59px 44px 10px 44px;
+  }
+
+  .service__text {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .service .section-title {
+    align-self: center;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -1103,6 +1117,22 @@ body > * {
   text-align: center;
 }
 
+@media screen and (max-width: 1114px) {
+  
+}
+
+@media screen and (max-width: 860px) {
+  
+}
+
+@media screen and (max-width: 730px) {
+  
+}
+
+@media screen and (max-width: 410px) {
+  
+}
+
 /** TEAM section -------------------------------------------- */
 
 .team {
@@ -1152,6 +1182,22 @@ body > * {
 .team__link:focus {
   outline: 1px solid black;
   outline-offset: 2px;
+}
+
+@media screen and (max-width: 1114px) {
+  
+}
+
+@media screen and (max-width: 860px) {
+  
+}
+
+@media screen and (max-width: 730px) {
+  
+}
+
+@media screen and (max-width: 410px) {
+  
 }
 
 /** NEWS section*/
@@ -1296,6 +1342,22 @@ body > * {
   opacity: 1;
 }
 
+@media screen and (max-width: 1114px) {
+  
+}
+
+@media screen and (max-width: 860px) {
+  
+}
+
+@media screen and (max-width: 730px) {
+  
+}
+
+@media screen and (max-width: 410px) {
+  
+}
+
 /** QUOTE section ------------------------------------------- */
 
 .quote {
@@ -1336,10 +1398,6 @@ body > * {
 }
 
 .quote__item {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
-
   padding: 170px 0 220px 0;
 }
 
@@ -1403,6 +1461,22 @@ body > * {
 .quote .owl-page.active {
   background-color: transparent;
   border-color: var(--di-gi_blue);
+}
+
+@media screen and (max-width: 1114px) {
+  
+}
+
+@media screen and (max-width: 860px) {
+  
+}
+
+@media screen and (max-width: 730px) {
+  
+}
+
+@media screen and (max-width: 410px) {
+  
 }
 
 /** FOOTER section ---------------------------------------- */
@@ -1564,6 +1638,22 @@ body > * {
   padding: 0;
 
   list-style-type: none;
+}
+
+@media screen and (max-width: 1114px) {
+  
+}
+
+@media screen and (max-width: 860px) {
+  
+}
+
+@media screen and (max-width: 730px) {
+  
+}
+
+@media screen and (max-width: 410px) {
+  
 }
 
 /** BOTTOM PAGE LINK TO TOP ------------------------ */
