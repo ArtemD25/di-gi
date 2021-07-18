@@ -1291,13 +1291,15 @@ body > * {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 52px 0 85px 0;
+  padding: 52px 120px 85px 120px;
 }
 
 .news .section-title {
   margin: 0 0 20px 0;
   padding: 0;
   max-width: 60%;
+
+  text-align: center; 
 }
 
 .news .branded-line {
@@ -1423,19 +1425,42 @@ body > * {
 }
 
 @media screen and (max-width: 1114px) {
-  
+  .news .container {
+    padding: 52px 80px 80px;
+  }
+
+  .news__gallery {
+    -webkit-column-count: 3;
+    -moz-column-count:3;
+    column-count: 3;
+  }
 }
 
 @media screen and (max-width: 860px) {
-  
+  .news__gallery {
+    -webkit-column-count: 2;
+    -moz-column-count:2;
+    column-count: 2;
+  }
 }
 
 @media screen and (max-width: 730px) {
+  .news .container {
+    padding: 60px 35px 40px;
+  }
   
 }
 
 @media screen and (max-width: 410px) {
-  
+  .news .container {
+    padding: 40px 25px;
+  }
+
+  .news__gallery {
+    -webkit-column-count: 1;
+    -moz-column-count:1;
+    column-count: 1;
+  }
 }
 
 /** QUOTE section ------------------------------------------- */
