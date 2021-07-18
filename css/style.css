@@ -291,14 +291,14 @@ body > * {
 
 .header__links-close::before {
   left: 0;
-  top: 2.5px;
+  top: 3px;
 
   transform: rotate(45deg);
 }
 
 .header__links-close::after {
   left: 0;
-  top: -14px;
+  top: -15px;
 
   transform: rotate(-45deg);
 }
@@ -316,6 +316,11 @@ body > * {
 @media screen and (max-width: 860px) {
   .header .container {
     padding: 17px 42px 17px 46px;
+  }
+
+  .header__link a {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -563,6 +568,18 @@ body > * {
   .intro .owl-page.active {
     border-color: var(--di-gi_blue);
   }
+
+  .intro .owl-prev,
+  .intro .owl-next {
+    width: 56px;
+    height: 56px;
+  }
+
+  .intro .owl-next::after,
+  .intro .owl-prev::after {
+    border-width: 0 3px 3px 0;
+    padding: 7px;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -638,7 +655,7 @@ body > * {
 
 .promo {
   margin: 0;
-  padding: 57px 150px;
+  padding: 65px 150px;
 
   background-color: var(--di-gi_blue);
   color: var(--white);
@@ -657,18 +674,20 @@ body > * {
 
 .promo__motto {
   display: block;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
   padding: 0;
 
   font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
   font-size: 24px;
+  line-height: 32px;
 }
 
 .promo__description {
   font-family: 'Dosis', Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
+  line-height: 18px;
 }
 
 .promo__link {
@@ -678,15 +697,75 @@ body > * {
 }
 
 @media screen and (max-width: 1114px) {
+  .promo {
+    padding: 50px 43px 40px 46px;
+  }
+
+  .promo__text {
+    max-width: 65%;
+  }
+
+  .promo__motto {
+    margin: 0 0 24px 0;
   
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .promo__description {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 @media screen and (max-width: 860px) {
-  
+  .promo {
+    padding: 60px 42px 30px 42px;
+  }
+
+  .promo__text {
+    max-width: 65%;
+  }
+
+  .promo__motto {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .promo__description {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 @media screen and (max-width: 730px) {
+  .promo {
+    padding: 51px auto 40px 0;
+  }
+
+  .promo .container {
+    flex-direction: column;
+  }
+
   
+  .promo__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .promo__motto {
+    margin: 0 0 19px 0;
+
+    text-align: center;
+  }
+    
+  .promo__description {
+    margin: 0 0 40px 0;
+
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 410px) {
@@ -872,6 +951,22 @@ body > * {
 
 .service__item:hover .service__link {
   display: block;
+}
+
+@media screen and (max-width: 1114px) {
+  
+}
+
+@media screen and (max-width: 860px) {
+  
+}
+
+@media screen and (max-width: 730px) {
+  
+}
+
+@media screen and (max-width: 410px) {
+  
 }
 
 /** PROJECTS section ---------------------------------------------- */
