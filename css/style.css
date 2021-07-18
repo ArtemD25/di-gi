@@ -1580,14 +1580,6 @@ body > * {
   }
 }
 
-@media screen and (max-width: 860px) {
-  
-}
-
-@media screen and (max-width: 730px) {
-  
-}
-
 @media screen and (max-width: 410px) {
   .quote__quotes::before {
     top: 50px;
@@ -1761,19 +1753,85 @@ body > * {
 }
 
 @media screen and (max-width: 1114px) {
-  
+  .footer .container {
+    padding-right:40px;
+    padding-left:40px;
+  }
+
+  .footer__call-to-action {
+    font-size: 36px;
+    line-height: 32px;
+  }
 }
 
 @media screen and (max-width: 860px) {
-  
+  .footer .container {
+    padding: 115px 40px 20px 40px;
+  }
+
+  .footer__links {
+    flex-wrap: wrap;
+  }
+
+  .footer__links > li {
+    width: 50%;
+    margin: 0 0 30px 0;
+  }
 }
 
 @media screen and (max-width: 730px) {
-  
+  .footer .container {
+    padding-bottom: 125px;
+  }
+
+  .footer__call-to-action {
+    font-size: 24px;
+    line-height: 26px;
+  }
 }
 
 @media screen and (max-width: 410px) {
+  .footer .container {
+    padding: 100px 22px 20px 22px;
+  }
+
+  .footer__call-to-action {
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .footer__social {
+    flex-direction: column;
+    margin: 0 auto 50px auto;
+    align-items: center;
   
+    list-style-type: none;
+  }
+
+  .footer__social > li {
+    border-color: transparent;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__links > li {
+    width: auto;
+    margin: 0 0 35px 0;
+  }
+
+  .footer__link-header,
+  .footer__contact-links > li,
+  .footer__link *:not(h3),
+  .footer__help-links > li,
+  .footer__menu-links > li {
+    text-align: center;
+  }
 }
 
 /** BOTTOM PAGE LINK TO TOP ------------------------ */
@@ -1811,4 +1869,26 @@ body > * {
   transform: translate(20px, 5px) rotate(45deg);
 
   transition: ease-in-out 300ms;
+}
+
+@media screen and (max-width: 410px) {
+  .bottom-page-link-to-top {
+    position: relative;
+
+    padding: 62px 0;
+
+    text-align: center;
+  }
+
+  .bottom-page-link-to-top a {
+    text-align: center;
+  }
+
+  .bottom-page-link-to-top a::after {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+
+    transform: translate(-50%, 0) rotate(45deg);
+  }
 }
