@@ -1196,6 +1196,8 @@ body > * {
 
 .team__photo {
   margin-right: 100px;
+  width: 470px;
+  height: 430px;
 
   object-fit: cover;
 }
